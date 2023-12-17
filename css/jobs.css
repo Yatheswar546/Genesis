@@ -1,0 +1,567 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/***************************************** Universal Elements *************************************/
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+li {
+    list-style: none;
+}
+
+h4 {
+    color: #fff;
+}
+
+h1 {
+    color: #ffff;
+}
+
+.btn {
+    width: fit-content;
+    height: 40px;
+    border-radius: 5px;
+    border-style: solid;
+    background-color: rgb(43, 43, 235);
+    color: #fff;
+}
+
+.btn:hover{
+    border: 1px solid #000;
+}
+
+/* .paragraph {
+    font-size: 60px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+} */
+
+/* .header-1 {
+    background-color: #0047AB;
+    width: 100%;
+    height: 20vh;
+
+}
+
+.header-1 h1 {
+    padding-top: 2%;
+
+} 
+
+.search {
+    display: flex;
+    flex-direction: row;
+} */
+
+/*************************************** RESUME FORM **************************************/
+.resume-modal h1{
+    color: #000;
+}
+.resume-modal h4{
+    color: red;
+    font-weight: 800;
+}
+
+/*************************************** RESUME SECTION **************************************/
+.resume-section {
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(255, 213, 0);
+    /* border: 3px solid red; */
+}
+
+.resume-section .content-section {
+    width: 50%;
+    height: fit-content;
+    margin-left: 5%;
+    margin-top: 8%;
+    /* border: 2px solid red; */
+}
+
+.resume-section .image-section {
+    width: 50%;
+    margin-top: -5%;
+    margin-left: -12%;
+    height: auto;
+}
+
+.resume-section .content-section .paragraph {
+    font-size: 60px;
+    color: black;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+.resume-section .content-section .caption {
+    font-size: 22px;
+    color: #000;
+}
+
+.resume-section .content-section button {
+    width: fit-content;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: 50px;
+}
+
+.resume-section .image-section .responsive {
+    width: 85%;
+    height: auto;
+}
+@media(max-width: 1050px){
+    .resume-section .content-section .paragraph{
+        font-size: 50px;
+    }
+}
+@media(max-width: 790px){
+    .resume-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media(max-width: 760px){
+    .resume-section .content-section .paragraph{
+        font-size: 30px;
+    }
+}
+@media(max-width: 440px){
+    .resume-section .content-section .paragraph{
+        font-size: 28px;
+    }
+    .resume-section .content-section button{
+        margin-left: 0px;
+    }
+}
+
+@media(max-width: 440px){
+    .resume-section .content-section .paragraph{
+        font-size: 20px;
+    }
+}
+
+/********************************* JOBS SECTION ***********************************/
+.jobs-section{
+    position: relative;
+    top: 100px;
+    padding: 25px;
+    /* border: 3px solid red; */
+}
+.job{
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: fit-content;
+    /* border: 3px solid red; */
+}
+
+.job .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 3px solid red; */
+}
+
+.job .heading h2 {
+    width: 40%;
+    height: 70px;
+    background-color: #0047AB;
+    color: #fff;
+    border-radius: 20px;
+    padding: 18px;
+    margin: 35px 0px;
+    text-align: center;
+    font-size: 35px;
+}
+@media screen and (max-width: 540px) {
+    .job .heading h2{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .job .heading h2{
+        font-size: 20px;
+        height: 55px;
+    }
+}
+@media screen and (max-width: 380px) {
+    .job .heading h2{
+        font-size: 18px;
+        height: 50px;
+    }
+}
+
+/****************** DISPLAY JOBS *****************/
+.jobs .container {
+    position: relative;
+    width: 100%;
+}
+.jobs .container h4{
+    width: 100%;
+    text-align: center;
+    color: red;
+    font-weight: 800;
+}
+
+.jobs .prev {
+    position: absolute;
+    top: 45%;
+    left: -20px;
+    font-size: 30px;
+    color: #0047AB;
+    cursor: pointer;
+}
+
+.jobs .next {
+    position: absolute;
+    top: 45%;
+    right: -20px;
+    font-size: 30px;
+    color: #0047AB;
+    cursor: pointer;
+}
+
+.jobs .job-postings .job-item {
+    text-align: start;
+    height: 300px;
+    width: 20%;
+    border-radius: 20px;
+    border: 2px solid gray;
+    padding: 0px 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.jobs .job-postings .job-item h3 {
+    font-size: 30px;
+    margin: 2%;
+    position: relative;
+    top: -30px;
+    /* border: 1px solid red; */
+}
+
+.jobs .job-postings .job-item p {
+    font-size: 20px;
+    margin: 2%;
+    /* border: 1px solid blue; */
+}
+
+.jobs .job-postings .job-item p.location{
+    position: relative;
+    top: 0px;
+}
+
+.jobs .job-postings .job-item p.email{
+    position: relative;
+    top: 0px;
+    font-size: 18px;
+    /* border: 1px solid red; */
+}
+
+.jobs .job-postings .job-item .button{
+    position: relative;
+    top: 25px;
+}
+
+.jobs .job-postings .job-item a{
+    width: fit-content;
+    height: 45px;
+    border-radius: 5px;
+    border: 2px solid #000;
+    background-color: rgb(43, 43, 235);
+    text-align: center;
+    padding: 7px;
+}
+
+.jobs .job-postings .job-item a:hover{
+    background-color: #022d69;
+    color: #fff;
+}
+
+.jobs .job-postings .job-item button{
+    width: 30%;
+    color: #fff;
+}
+ 
+.jobs .job-postings .job-item button:hover{
+    background-color: #022d69;
+    color: #fff;
+}
+
+@media(max-width: 770px){
+    .jobs .job-postings .job-item p.email{
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 590px){
+    .jobs .job-postings .job-item p.email{
+        font-size: 18px;
+    }
+}
+
+/************************* BALANCE CODE *************************/
+
+
+.job .job-listing {
+    border: 2px solid #0047AB;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.job .job-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.job .job-description {
+    margin-bottom: 10px;
+}
+
+.job .contact-info {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/******************************** FOOTER ***************************/
+.jobs-footer{
+    position: relative;
+    top: 100px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f9f9f9;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content {
+    color: #333;
+}
+
+
+/* Centering and Responsive Width */
+@media screen and (max-width: 800px) {
+    .job .job-listing {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+    .job .job-listing {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .job .job-listing {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination li {
+    list-style: none;
+    margin: 5px;
+}
+
+.pagination a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #000;
+}
+
+.pagination a.active {
+    background-color: #0047AB;
+    color: #fff;
+}
+
+.pagination a:hover {
+    background-color: #ddd;
+}
+
+
+
+
+.btn-1 {
+    height: 40px;
+    background-color: blue;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .content-section {
+        width: 30%;
+        margin-left: 5%;
+        margin-top: 20%;
+
+    }
+
+    .paragraph {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .header-1 {
+        width: 100%;
+        height: auto;
+    }
+
+    .where {
+        margin-bottom: -3%;
+        margin-top: 2%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .search {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .resume-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-1 {
+        height: 60vh;
+        width: 100%;
+    }
+
+    .content-section {
+        width: 100%;
+    }
+
+    .image-section {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .content-section {
+        width: 80%;
+        margin-left: 5%;
+        margin-top: 20%;
+
+    }
+
+    .paragraph {
+        width: 80%;
+    }
+
+}
+
+
+@media screen and (max-width: 700px) {
+    .header-1 {
+        width: 100%;
+        height: 60vh;
+
+    }
+
+    p.paragraph {
+
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (max-width: 200px) {
+    .header-1 {
+        width: 100%;
+        height: 60vh;
+
+    }
+
+
+}
+
+@media screen and (max-width: 400px) {
+    .header-1 {
+        width: 100%;
+        height: 60vh;
+
+    }
+
+    p.paragraph {
+
+        font-size: 20px;
+    }
+
+}
+
+/* input {
+    height: 40px;
+    width: fit-content;
+    border-radius: 5px;
+} */
+
+/* .btn-1 {
+    height: 40px;
+    width: fit-content;
+    border-radius: 5px;
+    background-color: rgb(43, 43, 235);
+    color: #fff;
+} */

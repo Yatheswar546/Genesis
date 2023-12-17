@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+
+/************************ Job Posting Section styles ***********************/
+.job-posting-section {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.job-posting-section h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.job-posting-section form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.job-posting-section label {
+    font-weight: bold;
+}
+
+.job-posting-section input,
+.job-posting-section textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.job-posting-section button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5E716A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.job-posting-section button:hover {
+    background-color: #4b5d58;
+}
+
+/* Footer styles */
+/* footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+} */
+
+/* Additional styles for the rest of the website can be added here */
+
+/* For responsiveness, you may use media queries to adjust styles for different screen sizes */
+/* Example media query for smaller screens */
+/* @media screen and (max-width: 600px) {
+    .job-posting-section {
+        max-width: 100%;
+        margin: 10px;
+    }
+} */
+
+
+
+/****************** EXTRA CODE ***************/
+/* Header styles */
+/* header {
+    background-color: #5E716A;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+} */
+
+/* Navigation styles */
+/* nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+} */

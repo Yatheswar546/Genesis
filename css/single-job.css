@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/********************* JOB DESCRIPTION ***********************/
+.job-description{
+    position: relative;
+    top: 100px;
+    width: 100%;
+    padding: 30px;
+    /* border: 2px solid red; */
+}
+
+.job-description h1{
+    text-align: center;
+    margin: 10px;
+}
+
+.job-description .job-details{
+    padding: 30px;
+    margin: 10px;
+    /* border: 2px solid blue; */
+}
+
+.job-description .location{
+    font-size: 21px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 45px;
+    font-weight: 700;
+}
+
+.job-description .email{
+    font-size: 21px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 45px;
+    font-weight: 700;
+}
+
+.job-description button{
+    margin: 10px;
+    margin-left: 50px;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    border-style: solid;
+    background-color: rgb(43, 43, 235);
+    color: #fff;
+}
+
+.job-description button:hover{
+    background-color: #022d69;
+    color: #fff;
+}
+
+/********************* FOOTER ****************/
+.single-job-footer{
+    position: relative;
+    top: 100px;
+}
+
+
+

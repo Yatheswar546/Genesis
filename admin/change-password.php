@@ -1,0 +1,147 @@
+<?php 
+    session_start();
+
+    if(isset($_SESSION['id'])){
+        $id = $_SESSION['id'];
+    }
+
+    include_once('../config.php');
+    
+     // for  password change   
+    if(isset($_POST['update']))
+    {
+        $oldpassword = ($_POST['currentpassword']); 
+        $newpassword = ($_POST['newpassword']);
+
+        $details = mysqli_query($db,"SELECT * FROM `admins` WHERE id='$id'");
+
+        $password_details = mysqli_fetch_assoc($details);
+
+        $db_password = $password_details['password'];
+
+        if($db_password === $newpassword){
+            echo "<script>alert('Old Password and New Password should be different !!');</script>";
+        }
+        else{
+            $sql = mysqli_query($db,"UPDATE `admins` SET `password`='$newpassword' WHERE id='$id'");
+            echo "<script>alert('Password Changed Successfully !!');</script>";
+        }
+        
+
+
+        // $sql=mysqli_query($db,"SELECT password FROM admin where password='$oldpassword'");
+        
+        // $num=mysqli_fetch_array($sql);
+        // if($num>0)
+        // {
+        // $adminid=$_SESSION['adminid'];
+        // $ret=mysqli_query($con,"update admin set password='$newpassword' where id='$adminid'");
+        // echo "<script type='text/javascript'> document.location = 'change-password.php'; </script>";
+        // }
+        // else
+        // {
+        // echo "<script>alert('Old Password not match !!');</script>";
+        // echo "<script type='text/javascript'> document.location = 'change-password.php'; </script>";
+        // }
+    }
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+
+    <title>Change password | Registration and Login System</title>
+
+     <!-- Webiste Icon -->
+     <link rel="shortcut icon" href="../images/tablogo.png" type="image/x-icon">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/admin.css">
+
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
+</head>
+
+
+<body class="sb-nav-fixed">
+    <?php include_once('./includes/navbar.php');?>
+    <div id="layoutSidenav">
+        <?php include_once('./includes/sidebar.html');?>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4">
+
+                    <h1 class="mt-4">Change Password</h1>
+                    <div class="card mb-4">
+                        <form method="post" name="changepassword" onSubmit="return valid();">
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <th>Current Password</th>
+                                        <td><input class="form-control" id="currentpassword" name="currentpassword"
+                                                type="password" value="" required /></td>
+                                    </tr>
+                                    <tr>
+                                        <th>New Password</th>
+                                        <td><input class="form-control" id="newpassword" name="newpassword"
+                                                type="password" value="" required /></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Confirm Password</th>
+                                        <td colspan="3"><input class="form-control" id="confirmpassword"
+                                                name="confirmpassword" type="password" required /></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td colspan="4" style="text-align:center ;"><button type="submit"
+                                                class="btn btn-primary btn-block" name="update">Change</button></td>
+
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div>
+            </main>
+            <?php //include('../includes/footer.php');?>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="../js/datatables-simple-demo.js"></script>
+
+    <!-- Custom Script -->
+    <script language="javascript" type="text/javascript">
+        function valid() {
+            if (document.changepassword.newpassword.value != document.changepassword.confirmpassword.value) {
+                alert("Password and Confirm Password Field do not match  !!");
+                document.changepassword.confirmpassword.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+    <script src="../js/scripts.js"></script>
+
+</body>
+
+</html>
+<?php 
+    // }
+    // else{
+    //     header('location:logout.php');
+    // }    
+?>
